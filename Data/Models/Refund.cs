@@ -16,7 +16,7 @@ public class Refund
     public int RefundMethodId { get; set; }
     public int PaymentId { get; set; }
 
-    [ForeignKey("User")]
+    [ForeignKey(nameof(User))]
     public int ProcessedByUserId { get; set; }
     public decimal Amount { get; set; }
     public DateTime RefundDate { get; set; }
@@ -25,7 +25,7 @@ public class Refund
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual RefundMethod RefundMethod { get; set; }
-    public virtual Payment Payment { get; set; }
-    public virtual User ProcessedByUser { get; set; }
+    public RefundMethod RefundMethod { get; set; }
+    public Payment Payment { get; set; }
+    public User ProcessedByUser { get; set; }
 }

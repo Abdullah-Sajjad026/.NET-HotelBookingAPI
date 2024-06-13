@@ -15,6 +15,6 @@ public class Feedback
     public DateTime FeedbackDate { get; set; } = DateTime.UtcNow;
     public bool IsDeleted { get; set; } = false;
 
-    public virtual Reservation Reservation { get; set; }
-    public virtual Guest Guest { get; set; }
+    public Reservation Reservation { get; set; }
+    public Guest Guest { get; set; }
 }

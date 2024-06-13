@@ -16,6 +16,6 @@ public class Payment
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual Reservation Reservation { get; set; }
-    public virtual PaymentBatch PaymentBatch { get; set; }
+    public Reservation Reservation { get; set; }
+    public PaymentBatch PaymentBatch { get; set; }
 }

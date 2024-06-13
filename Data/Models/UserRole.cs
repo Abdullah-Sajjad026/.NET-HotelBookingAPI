@@ -16,6 +16,5 @@ public class UserRole
     public required string Description { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-    // A role can have many users associated with it
-    public virtual ICollection<User>? Users { get; set; }
+    public ICollection<User> Users { get; } = new List<User>();
 }

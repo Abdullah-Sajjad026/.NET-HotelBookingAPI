@@ -41,7 +41,7 @@ public class Reservation
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual Room Room { get; set; }
-    public virtual User User { get; set; }
-    public virtual ICollection<ReservationGuest>? ReservationGuests { get; set; }
+    public Room Room { get; set; }
+    public User User { get; set; }
+    public ICollection<Guest> Guests { get; } = new List<Guest>();
 }

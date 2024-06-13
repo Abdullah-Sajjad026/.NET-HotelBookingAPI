@@ -26,5 +26,5 @@ public class Cancellation
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual Reservation Reservation { get; set; }
+    public Reservation Reservation { get; set; }
 }

@@ -23,5 +23,5 @@ public class User
     public DateTime LastLogin { get; set; }
 
     // A user must be associated with a role
-    public virtual required UserRole Role { get; set; }
+    public required UserRole Role { get; set; }
 }

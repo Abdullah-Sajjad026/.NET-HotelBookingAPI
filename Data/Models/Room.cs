@@ -35,8 +35,8 @@ public class Room
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     // A room belongs to a room type
-    public required virtual RoomType RoomType { get; set; }
+    public required RoomType RoomType { get; set; }
 
     // A room can have many amenities
-    public virtual ICollection<RoomAmenity>? RoomAmenities { get; set; }
+    public ICollection<Amenity> Amenities { get; } = new List<Amenity>();
 }

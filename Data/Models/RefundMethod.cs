@@ -9,4 +9,6 @@ public class RefundMethod
     public bool IsDeleted { get; set; } = false;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+    public ICollection<Refund> Refunds { get; } = new List<Refund>();
 }

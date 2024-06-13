@@ -13,5 +13,5 @@ public class Amenity
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual ICollection<RoomAmenity>? RoomAmenities { get; set; }
+    public ICollection<Room>? Rooms { get; } = new List<Room>();
 }

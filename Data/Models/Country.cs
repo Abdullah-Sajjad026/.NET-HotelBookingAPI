@@ -16,4 +16,6 @@ public class Country
     [MaxLength(10)]
     public required string CountryCode { get; set; }
     public bool IsActive { get; set; } = true;
+
+    public ICollection<CountryState>? States { get; } = new List<CountryState>();
 }

@@ -17,5 +17,6 @@ public class PaymentBatch
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual User User { get; set; }
+    public User User { get; set; }
+    public ICollection<Payment> Payments { get; } = new List<Payment>();
 }

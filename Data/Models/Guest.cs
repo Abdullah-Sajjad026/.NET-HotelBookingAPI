@@ -26,7 +26,7 @@ public class Guest
     public GuestAgeGroup AgeGroup { get { return Age switch { < 2 => GuestAgeGroup.Infant, < 18 => GuestAgeGroup.Child, < 60 => GuestAgeGroup.Adult, _ => GuestAgeGroup.Senior }; } }
 
     public int Age { get; set; }
-    [ForeignKey("Country")]
+    [ForeignKey(nameof(Country))]
     public int CountryId { get; set; }
     public int CountryStateId { get; set; }
 
@@ -36,7 +36,9 @@ public class Guest
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public virtual Country Country { get; set; }
-    public virtual CountryState CountryState { get; set; }
-    public virtual User User { get; set; }
+    public Country Country { get; set; }
+    public CountryState CountryState { get; set; }
+    public User User { get; set; }
+
+    public ICollection<Reservation> Reservations { get; } = new List<Reservation>();
 }

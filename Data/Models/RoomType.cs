@@ -14,6 +14,5 @@ public class RoomType
     public bool IsActive { get; set; } = true;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-    public virtual ICollection<Room>? Rooms { get; set; }
-
+    public ICollection<Room> Rooms { get; } = new List<Room>();
 }
