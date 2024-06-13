@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using HotelBookingAPI.Shared.DbValidationAttributes;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelBookingAPI.Data.Models;
@@ -10,10 +11,15 @@ public enum ReservationStatus
     CheckedIn = 2,
     CheckedOut = 3,
     Cancelled = 4
-
 }
 
+
 [Table("Reservations")]
+// Constraint to ensure that the combination of RoomId, CheckInDate, and CheckOutDate is unique
+[Index(nameof(RoomId), nameof(CheckInDate), nameof(CheckOutDate), IsUnique = true)]
+// Constraint to ensure that CheckoutDate is greater than CheckInDate
+[CheckOutDateGreaterThanCheckInDate]
+
 public class Reservation
 {
     public int ReservationId { get; set; }
@@ -35,5 +41,7 @@ public class Reservation
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-
+    public virtual Room Room { get; set; }
+    public virtual User User { get; set; }
+    public virtual ICollection<ReservationGuest>? ReservationGuests { get; set; }
 }
