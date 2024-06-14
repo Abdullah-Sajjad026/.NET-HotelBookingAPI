@@ -13,10 +13,8 @@ public class HotelBookingDbContext : DbContext
     public DbSet<RoomType> RoomTypes { get; set; }
     public DbSet<Room> Rooms { get; set; }
     public DbSet<Amenity> Amenities { get; set; }
-    public DbSet<RoomAmenity> RoomAmenities { get; set; }
     public DbSet<Guest> Guests { get; set; }
     public DbSet<Reservation> Reservations { get; set; }
-    public DbSet<ReservationGuest> ReservationGuests { get; set; }
     public DbSet<PaymentBatch> PaymentBatches { get; set; }
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Cancellation> Cancellations { get; set; }
@@ -24,7 +22,6 @@ public class HotelBookingDbContext : DbContext
     public DbSet<Refund> Refunds { get; set; }
     public DbSet<Feedback> Feedbacks { get; set; }
 
-    // onmodelconfiguring
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

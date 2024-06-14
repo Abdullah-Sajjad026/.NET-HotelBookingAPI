@@ -26,8 +26,7 @@ public class Guest
     public GuestAgeGroup AgeGroup { get { return Age switch { < 2 => GuestAgeGroup.Infant, < 18 => GuestAgeGroup.Child, < 60 => GuestAgeGroup.Adult, _ => GuestAgeGroup.Senior }; } }
 
     public int Age { get; set; }
-    [ForeignKey(nameof(Country))]
-    public int CountryId { get; set; }
+
     public int CountryStateId { get; set; }
 
     public bool IsActive { get; set; } = true;
@@ -36,7 +35,6 @@ public class Guest
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public Country Country { get; set; }
     public CountryState CountryState { get; set; }
     public User User { get; set; }
 
