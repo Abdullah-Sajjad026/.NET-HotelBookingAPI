@@ -22,36 +22,6 @@ namespace HotelBookingAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AmenityRoom", b =>
-                {
-                    b.Property<int>("AmenitiesAmenityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoomsRoomId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AmenitiesAmenityId", "RoomsRoomId");
-
-                    b.HasIndex("RoomsRoomId");
-
-                    b.ToTable("AmenityRoom");
-                });
-
-            modelBuilder.Entity("GuestReservation", b =>
-                {
-                    b.Property<int>("GuestsGuestId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ReservationsReservationId")
-                        .HasColumnType("int");
-
-                    b.HasKey("GuestsGuestId", "ReservationsReservationId");
-
-                    b.HasIndex("ReservationsReservationId");
-
-                    b.ToTable("GuestReservation");
-                });
-
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Amenity", b =>
                 {
                     b.Property<int>("AmenityId")
@@ -83,6 +53,108 @@ namespace HotelBookingAPI.Migrations
                     b.HasKey("AmenityId");
 
                     b.ToTable("Amenities");
+
+                    b.HasData(
+                        new
+                        {
+                            AmenityId = 1,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1773),
+                            Description = "Free Wi-Fi",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Free Wi-Fi",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1774)
+                        },
+                        new
+                        {
+                            AmenityId = 2,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1776),
+                            Description = "Free Parking",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Free Parking",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1777)
+                        },
+                        new
+                        {
+                            AmenityId = 3,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1778),
+                            Description = "Swimming Pool",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Swimming Pool",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1778)
+                        },
+                        new
+                        {
+                            AmenityId = 4,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1779),
+                            Description = "Gym",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Gym",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1779)
+                        },
+                        new
+                        {
+                            AmenityId = 5,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1780),
+                            Description = "Spa",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Spa",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1780)
+                        },
+                        new
+                        {
+                            AmenityId = 6,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1781),
+                            Description = "Restaurant",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Restaurant",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1781)
+                        },
+                        new
+                        {
+                            AmenityId = 7,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1782),
+                            Description = "Bar",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Bar",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1783)
+                        },
+                        new
+                        {
+                            AmenityId = 8,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1783),
+                            Description = "Room Service",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Room Service",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1784)
+                        },
+                        new
+                        {
+                            AmenityId = 9,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1785),
+                            Description = "Airport Shuttle",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Airport Shuttle",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1785)
+                        },
+                        new
+                        {
+                            AmenityId = 10,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1786),
+                            Description = "Pet Friendly",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Pet Friendly",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1786)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Cancellation", b =>
@@ -123,6 +195,20 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("ReservationId");
 
                     b.ToTable("Cancellations");
+
+                    b.HasData(
+                        new
+                        {
+                            CancellationId = 1,
+                            CancellationDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4714),
+                            CancellationFee = 50.00m,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4712),
+                            IsDeleted = false,
+                            Reason = "Change of plans",
+                            ReservationId = 1,
+                            Status = 0,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4713)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Country", b =>
@@ -152,6 +238,36 @@ namespace HotelBookingAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            CountryId = 1,
+                            CountryCode = "US",
+                            CountryName = "United States",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            CountryId = 2,
+                            CountryCode = "CA",
+                            CountryName = "Canada",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            CountryId = 3,
+                            CountryCode = "UK",
+                            CountryName = "United Kingdom",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            CountryId = 4,
+                            CountryCode = "PK",
+                            CountryName = "Pakistan",
+                            IsActive = true
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.CountryState", b =>
@@ -183,6 +299,64 @@ namespace HotelBookingAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("CountryStates");
+
+                    b.HasData(
+                        new
+                        {
+                            CountryStateId = 1,
+                            CountryId = 1,
+                            StateCode = "CA",
+                            StateName = "California"
+                        },
+                        new
+                        {
+                            CountryStateId = 2,
+                            CountryId = 1,
+                            StateCode = "NY",
+                            StateName = "New York"
+                        },
+                        new
+                        {
+                            CountryStateId = 3,
+                            CountryId = 2,
+                            StateCode = "ON",
+                            StateName = "Ontario"
+                        },
+                        new
+                        {
+                            CountryStateId = 4,
+                            CountryId = 2,
+                            StateCode = "QC",
+                            StateName = "Quebec"
+                        },
+                        new
+                        {
+                            CountryStateId = 5,
+                            CountryId = 3,
+                            StateCode = "ENG",
+                            StateName = "England"
+                        },
+                        new
+                        {
+                            CountryStateId = 6,
+                            CountryId = 3,
+                            StateCode = "SCT",
+                            StateName = "Scotland"
+                        },
+                        new
+                        {
+                            CountryStateId = 7,
+                            CountryId = 4,
+                            StateCode = "PB",
+                            StateName = "Punjab"
+                        },
+                        new
+                        {
+                            CountryStateId = 8,
+                            CountryId = 4,
+                            StateCode = "SD",
+                            StateName = "Sindh"
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Feedback", b =>
@@ -219,6 +393,28 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("ReservationId");
 
                     b.ToTable("Feedbacks");
+
+                    b.HasData(
+                        new
+                        {
+                            FeedbackId = 1,
+                            Comment = "Great service!",
+                            FeedbackDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(5004),
+                            GuestId = 0,
+                            IsDeleted = false,
+                            Rating = 5,
+                            ReservationId = 1
+                        },
+                        new
+                        {
+                            FeedbackId = 2,
+                            Comment = "Good service!",
+                            FeedbackDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(5006),
+                            GuestId = 0,
+                            IsDeleted = false,
+                            Rating = 4,
+                            ReservationId = 2
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Guest", b =>
@@ -267,7 +463,7 @@ namespace HotelBookingAPI.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("GuestId");
@@ -277,6 +473,53 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Guests");
+
+                    b.HasData(
+                        new
+                        {
+                            GuestId = 1,
+                            Address = "1234 Elm St",
+                            Age = 25,
+                            CountryStateId = 1,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 731, DateTimeKind.Utc).AddTicks(2391),
+                            Email = "johndoe@example.com",
+                            FirstName = "John",
+                            IsActive = true,
+                            IsDeleted = false,
+                            LastName = "Doe",
+                            Phone = "1234567890",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 731, DateTimeKind.Utc).AddTicks(2393)
+                        },
+                        new
+                        {
+                            GuestId = 2,
+                            Address = "5678 Oak St",
+                            Age = 30,
+                            CountryStateId = 2,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 731, DateTimeKind.Utc).AddTicks(3162),
+                            Email = "janedoe@example.com",
+                            FirstName = "Jane",
+                            IsActive = true,
+                            IsDeleted = false,
+                            LastName = "Doe",
+                            Phone = "0987654321",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 731, DateTimeKind.Utc).AddTicks(3162)
+                        },
+                        new
+                        {
+                            GuestId = 3,
+                            Address = "2468 Pine St",
+                            Age = 35,
+                            CountryStateId = 3,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 731, DateTimeKind.Utc).AddTicks(3166),
+                            Email = "alicesmith@example.com",
+                            FirstName = "Alice",
+                            IsActive = true,
+                            IsDeleted = false,
+                            LastName = "Smith",
+                            Phone = "1357924680",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 731, DateTimeKind.Utc).AddTicks(3166)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Payment", b =>
@@ -312,6 +555,38 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("ReservationId");
 
                     b.ToTable("Payments");
+
+                    b.HasData(
+                        new
+                        {
+                            PaymentId = 1,
+                            Amount = 50.00m,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4636),
+                            IsDeleted = false,
+                            PaymentBatchId = 1,
+                            ReservationId = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4636)
+                        },
+                        new
+                        {
+                            PaymentId = 2,
+                            Amount = 50.00m,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4639),
+                            IsDeleted = false,
+                            PaymentBatchId = 1,
+                            ReservationId = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4639)
+                        },
+                        new
+                        {
+                            PaymentId = 3,
+                            Amount = 200.00m,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4641),
+                            IsDeleted = false,
+                            PaymentBatchId = 2,
+                            ReservationId = 2,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4641)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.PaymentBatch", b =>
@@ -348,6 +623,30 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("PaymentBatches");
+
+                    b.HasData(
+                        new
+                        {
+                            PaymentBatchId = 1,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4557),
+                            IsDeleted = false,
+                            IsPaid = true,
+                            PaymentDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4559),
+                            TotalAmount = 100.00m,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4557),
+                            UserId = 1
+                        },
+                        new
+                        {
+                            PaymentBatchId = 2,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4562),
+                            IsDeleted = false,
+                            IsPaid = true,
+                            PaymentDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4563),
+                            TotalAmount = 200.00m,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4562),
+                            UserId = 1
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Refund", b =>
@@ -395,6 +694,21 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("RefundMethodId");
 
                     b.ToTable("Refunds");
+
+                    b.HasData(
+                        new
+                        {
+                            RefundId = 1,
+                            Amount = 50.00m,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4921),
+                            Description = "Refund for cancellation",
+                            IsDeleted = false,
+                            PaymentId = 1,
+                            ProcessedByUserId = 1,
+                            RefundDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4924),
+                            RefundMethodId = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4922)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.RefundMethod", b =>
@@ -428,6 +742,28 @@ namespace HotelBookingAPI.Migrations
                     b.HasKey("RefundMethodId");
 
                     b.ToTable("RefundMethods");
+
+                    b.HasData(
+                        new
+                        {
+                            RefundMethodId = 1,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4832),
+                            Description = "Refund via bank transfer",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Bank Transfer",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4832)
+                        },
+                        new
+                        {
+                            RefundMethodId = 2,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4836),
+                            Description = "Refund via credit card",
+                            IsActive = true,
+                            IsDeleted = false,
+                            Name = "Credit Card",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4836)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Reservation", b =>
@@ -480,6 +816,85 @@ namespace HotelBookingAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("Reservations");
+
+                    b.HasData(
+                        new
+                        {
+                            ReservationId = 1,
+                            BookingDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4327),
+                            CheckInDate = new DateTime(2024, 6, 17, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4327),
+                            CheckOutDate = new DateTime(2024, 6, 19, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4333),
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4324),
+                            IsActive = true,
+                            IsDeleted = false,
+                            NumberOfGuests = 2,
+                            RoomId = 1,
+                            Status = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4324),
+                            UserId = 0
+                        },
+                        new
+                        {
+                            ReservationId = 2,
+                            BookingDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4335),
+                            CheckInDate = new DateTime(2024, 6, 15, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4336),
+                            CheckOutDate = new DateTime(2024, 6, 18, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4344),
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4334),
+                            IsActive = true,
+                            IsDeleted = false,
+                            NumberOfGuests = 1,
+                            RoomId = 2,
+                            Status = 2,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4335),
+                            UserId = 0
+                        },
+                        new
+                        {
+                            ReservationId = 3,
+                            BookingDate = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4346),
+                            CheckInDate = new DateTime(2024, 6, 18, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4347),
+                            CheckOutDate = new DateTime(2024, 6, 20, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4347),
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4345),
+                            IsActive = true,
+                            IsDeleted = false,
+                            NumberOfGuests = 3,
+                            RoomId = 3,
+                            Status = 4,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(4346),
+                            UserId = 0
+                        });
+                });
+
+            modelBuilder.Entity("HotelBookingAPI.Data.Models.ReservationGuest", b =>
+                {
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GuestId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ReservationId", "GuestId");
+
+                    b.HasIndex("GuestId");
+
+                    b.ToTable("ReservationGuests");
+
+                    b.HasData(
+                        new
+                        {
+                            ReservationId = 1,
+                            GuestId = 1
+                        },
+                        new
+                        {
+                            ReservationId = 1,
+                            GuestId = 2
+                        },
+                        new
+                        {
+                            ReservationId = 2,
+                            GuestId = 3
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Room", b =>
@@ -506,9 +921,10 @@ namespace HotelBookingAPI.Migrations
                         .HasPrecision(10, 2)
                         .HasColumnType("decimal(10,2)");
 
-                    b.Property<int>("RoomNumber")
+                    b.Property<string>("RoomNumber")
+                        .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("RoomTypeId")
                         .HasColumnType("int");
@@ -527,6 +943,107 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("RoomTypeId");
 
                     b.ToTable("Rooms");
+
+                    b.HasData(
+                        new
+                        {
+                            RoomId = 1,
+                            BedType = "Single",
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1588),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Price = 100m,
+                            RoomNumber = "101",
+                            RoomTypeId = 1,
+                            Status = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1591),
+                            ViewType = "City"
+                        },
+                        new
+                        {
+                            RoomId = 2,
+                            BedType = "Double",
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1598),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Price = 150m,
+                            RoomNumber = "102",
+                            RoomTypeId = 2,
+                            Status = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1598),
+                            ViewType = "Sea"
+                        },
+                        new
+                        {
+                            RoomId = 3,
+                            BedType = "King",
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1601),
+                            IsActive = true,
+                            IsDeleted = false,
+                            Price = 200m,
+                            RoomNumber = "103",
+                            RoomTypeId = 3,
+                            Status = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 94, DateTimeKind.Utc).AddTicks(1601),
+                            ViewType = "Mountain"
+                        });
+                });
+
+            modelBuilder.Entity("HotelBookingAPI.Data.Models.RoomAmenity", b =>
+                {
+                    b.Property<int>("AmenityId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AmenityId", "RoomId");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("RoomAmenities");
+
+                    b.HasData(
+                        new
+                        {
+                            AmenityId = 1,
+                            RoomId = 1
+                        },
+                        new
+                        {
+                            AmenityId = 2,
+                            RoomId = 1
+                        },
+                        new
+                        {
+                            AmenityId = 3,
+                            RoomId = 1
+                        },
+                        new
+                        {
+                            AmenityId = 4,
+                            RoomId = 2
+                        },
+                        new
+                        {
+                            AmenityId = 5,
+                            RoomId = 2
+                        },
+                        new
+                        {
+                            AmenityId = 6,
+                            RoomId = 2
+                        },
+                        new
+                        {
+                            AmenityId = 7,
+                            RoomId = 3
+                        },
+                        new
+                        {
+                            AmenityId = 8,
+                            RoomId = 3
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.RoomType", b =>
@@ -563,6 +1080,37 @@ namespace HotelBookingAPI.Migrations
                         .IsUnique();
 
                     b.ToTable("RoomTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            RoomTypeId = 1,
+                            AccessibilityFeatures = "Wheelchair Accessible",
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 93, DateTimeKind.Utc).AddTicks(5514),
+                            Description = "Single Bed",
+                            IsActive = true,
+                            TypeName = "Single",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 93, DateTimeKind.Utc).AddTicks(5518)
+                        },
+                        new
+                        {
+                            RoomTypeId = 2,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 93, DateTimeKind.Utc).AddTicks(5523),
+                            Description = "Double Bed",
+                            IsActive = true,
+                            TypeName = "Double",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 93, DateTimeKind.Utc).AddTicks(5523)
+                        },
+                        new
+                        {
+                            RoomTypeId = 3,
+                            AccessibilityFeatures = "Accessible Bathroom, Wheelchair Accessible, Roll-in Shower",
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 93, DateTimeKind.Utc).AddTicks(5524),
+                            Description = "Suite",
+                            IsActive = true,
+                            TypeName = "Suite",
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 27, 93, DateTimeKind.Utc).AddTicks(5524)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.User", b =>
@@ -609,6 +1157,20 @@ namespace HotelBookingAPI.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 998, DateTimeKind.Utc).AddTicks(6796),
+                            Email = "admin@jabsihotels.com",
+                            IsActive = true,
+                            IsDeleted = false,
+                            LastLogin = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PasswordHash = "$2a$10$KEjTVVe3KZPemkzylCI.HO:$2a$10$KEjTVVe3KZPemkzylCI.HO098gpB.27EN7NHcG0zQO6aIflMpdifa",
+                            RoleId = 1,
+                            UpdatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 998, DateTimeKind.Utc).AddTicks(6797)
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.UserRole", b =>
@@ -638,36 +1200,24 @@ namespace HotelBookingAPI.Migrations
                     b.HasKey("RoleId");
 
                     b.ToTable("UserRoles");
-                });
 
-            modelBuilder.Entity("AmenityRoom", b =>
-                {
-                    b.HasOne("HotelBookingAPI.Data.Models.Amenity", null)
-                        .WithMany()
-                        .HasForeignKey("AmenitiesAmenityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HotelBookingAPI.Data.Models.Room", null)
-                        .WithMany()
-                        .HasForeignKey("RoomsRoomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("GuestReservation", b =>
-                {
-                    b.HasOne("HotelBookingAPI.Data.Models.Guest", null)
-                        .WithMany()
-                        .HasForeignKey("GuestsGuestId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HotelBookingAPI.Data.Models.Reservation", null)
-                        .WithMany()
-                        .HasForeignKey("ReservationsReservationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasData(
+                        new
+                        {
+                            RoleId = 1,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 998, DateTimeKind.Utc).AddTicks(6573),
+                            Description = "Admin role has full access to all resources",
+                            IsActive = true,
+                            RoleName = "Admin"
+                        },
+                        new
+                        {
+                            RoleId = 2,
+                            CreatedAt = new DateTime(2024, 6, 16, 14, 56, 26, 998, DateTimeKind.Utc).AddTicks(6578),
+                            Description = "User role has limited access to resources",
+                            IsActive = true,
+                            RoleName = "User"
+                        });
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Cancellation", b =>
@@ -721,9 +1271,7 @@ namespace HotelBookingAPI.Migrations
 
                     b.HasOne("HotelBookingAPI.Data.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("CountryState");
 
@@ -752,7 +1300,7 @@ namespace HotelBookingAPI.Migrations
             modelBuilder.Entity("HotelBookingAPI.Data.Models.PaymentBatch", b =>
                 {
                     b.HasOne("HotelBookingAPI.Data.Models.User", "User")
-                        .WithMany()
+                        .WithMany("PaymentBatches")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -806,6 +1354,25 @@ namespace HotelBookingAPI.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("HotelBookingAPI.Data.Models.ReservationGuest", b =>
+                {
+                    b.HasOne("HotelBookingAPI.Data.Models.Guest", "Guest")
+                        .WithMany()
+                        .HasForeignKey("GuestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HotelBookingAPI.Data.Models.Reservation", "Reservation")
+                        .WithMany()
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Guest");
+
+                    b.Navigation("Reservation");
+                });
+
             modelBuilder.Entity("HotelBookingAPI.Data.Models.Room", b =>
                 {
                     b.HasOne("HotelBookingAPI.Data.Models.RoomType", "RoomType")
@@ -815,6 +1382,25 @@ namespace HotelBookingAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("RoomType");
+                });
+
+            modelBuilder.Entity("HotelBookingAPI.Data.Models.RoomAmenity", b =>
+                {
+                    b.HasOne("HotelBookingAPI.Data.Models.Amenity", "Amenity")
+                        .WithMany()
+                        .HasForeignKey("AmenityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HotelBookingAPI.Data.Models.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Amenity");
+
+                    b.Navigation("Room");
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.User", b =>
@@ -846,6 +1432,11 @@ namespace HotelBookingAPI.Migrations
             modelBuilder.Entity("HotelBookingAPI.Data.Models.RoomType", b =>
                 {
                     b.Navigation("Rooms");
+                });
+
+            modelBuilder.Entity("HotelBookingAPI.Data.Models.User", b =>
+                {
+                    b.Navigation("PaymentBatches");
                 });
 
             modelBuilder.Entity("HotelBookingAPI.Data.Models.UserRole", b =>

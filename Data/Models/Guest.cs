@@ -15,7 +15,7 @@ public class Guest
 {
     public int GuestId { get; set; }
     // Foreign key to the User table by convention
-    public int UserId { get; set; }
+    public int? UserId { get; set; }
 
     public required string FirstName { get; set; }
     public required string LastName { get; set; }
@@ -36,7 +36,6 @@ public class Guest
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     public CountryState CountryState { get; set; }
-    public User User { get; set; }
-
+    public User? User { get; set; }
     public ICollection<Reservation> Reservations { get; } = new List<Reservation>();
 }

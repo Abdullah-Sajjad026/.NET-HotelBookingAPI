@@ -23,5 +23,6 @@ public class User
     public DateTime LastLogin { get; set; }
 
     // A user must be associated with a role
-    public required UserRole Role { get; set; }
+    public UserRole Role { get; set; }
+    public ICollection<PaymentBatch> PaymentBatches { get; } = new List<PaymentBatch>();
 }

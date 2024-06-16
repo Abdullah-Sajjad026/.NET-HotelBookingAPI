@@ -17,7 +17,7 @@ public class Room
     public int RoomId { get; set; }
 
     [MaxLength(50)]
-    public int RoomNumber { get; set; }
+    public string RoomNumber { get; set; }
     public int RoomTypeId { get; set; }
 
     [Precision(10, 2)]
@@ -35,7 +35,7 @@ public class Room
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
     // A room belongs to a room type
-    public required RoomType RoomType { get; set; }
+    public RoomType RoomType { get; set; }
 
     // A room can have many amenities
     public ICollection<Amenity> Amenities { get; } = new List<Amenity>();

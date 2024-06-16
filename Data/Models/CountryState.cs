@@ -16,5 +16,5 @@ public class CountryState
     [MaxLength(10)]
     public required string StateCode { get; set; }
     public int CountryId { get; set; }
-    public required Country Country { get; set; }
+    public Country Country { get; set; }
 }

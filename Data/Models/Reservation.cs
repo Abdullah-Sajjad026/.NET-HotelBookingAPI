@@ -43,5 +43,5 @@ public class Reservation
 
     public Room Room { get; set; }
     public User User { get; set; }
-    public ICollection<Guest> Guests { get; } = new List<Guest>();
+    public ICollection<Guest> Guests { get; set; } = new List<Guest>();
 }
