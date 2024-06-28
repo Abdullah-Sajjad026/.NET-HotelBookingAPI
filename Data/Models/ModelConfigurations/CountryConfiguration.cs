@@ -1,3 +1,4 @@
+/*
 using HotelBookingAPI.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -36,3 +37,4 @@ public class CountryConfiguration : IEntityTypeConfiguration<Country>
         );
     }
 }
+*/

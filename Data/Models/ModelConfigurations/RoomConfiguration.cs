@@ -1,3 +1,4 @@
+/*
 using HotelBookingAPI.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -50,3 +51,4 @@ public class RoomConfiguration : IEntityTypeConfiguration<Room>
         );
     }
 }
+*/

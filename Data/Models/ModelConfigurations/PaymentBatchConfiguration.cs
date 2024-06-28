@@ -1,3 +1,4 @@
+/*
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -27,3 +28,4 @@ public class PaymentBatchConfiguration : IEntityTypeConfiguration<PaymentBatch>
         );
     }
 }
+*/

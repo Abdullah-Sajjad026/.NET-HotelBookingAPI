@@ -1,23 +1,27 @@
-
-using HotelBookingAPI.Data.Models;
-using HotelBookingAPI.Shared;
+/*
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using HotelBookingAPI.Shared;
 
 namespace HotelBookingAPI.Data.Models.ModelConfigurations;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
+    public void Configure(EntityTypeBuilder<User> entityBuilder)
     {
-
-        builder.HasData(new User
+        var AdminUser = new User
         {
-            UserId = 1,
-            RoleId = 1, // Assuming RoleId 1 exists
-            Email = "admin@jabsihotels.com",
-            PasswordHash = PasswordHasher.HashPassword("AdminPassword"), // Replace "AdminPassword" with actual admin password
-        }
-        );
+            UserName = "admin",
+            NormalizedUserName = "ADMIN",
+            Email = "admin@example.com",
+            NormalizedEmail = "ADMIN@EXAMPLE.COM",
+            EmailConfirmed = true,
+            LockoutEnabled = false,
+            SecurityStamp = Guid.NewGuid().ToString(),
+            PasswordHash = PasswordHasher.HashPassword("AdminPassword123!")
+        };
+
+        entityBuilder.HasData(AdminUser);
     }
 }
+*/

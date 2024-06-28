@@ -15,7 +15,7 @@ public class Guest
 {
     public int GuestId { get; set; }
     // Foreign key to the User table by convention
-    public int? UserId { get; set; }
+    public string? UserId { get; set; }
 
     public required string FirstName { get; set; }
     public required string LastName { get; set; }

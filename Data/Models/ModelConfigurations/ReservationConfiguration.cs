@@ -1,3 +1,4 @@
+/*
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -25,6 +26,7 @@ public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
                 CheckOutDate = DateTime.UtcNow.AddDays(3),
                 NumberOfGuests = 2,
                 Status = ReservationStatus.Reserved,
+                UserId = 1
             },
             new Reservation
             {
@@ -35,6 +37,7 @@ public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
                 CheckOutDate = DateTime.UtcNow.AddDays(2),
                 NumberOfGuests = 1,
                 Status = ReservationStatus.CheckedIn,
+                UserId = 1
             },
             new Reservation
             {
@@ -45,7 +48,9 @@ public class ReservationConfiguration : IEntityTypeConfiguration<Reservation>
                 CheckOutDate = DateTime.UtcNow.AddDays(4),
                 NumberOfGuests = 3,
                 Status = ReservationStatus.Cancelled,
+                UserId = 1
             }
         );
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -49,3 +50,4 @@ public class GuestConfiguration : IEntityTypeConfiguration<Guest>
         );
     }
 }
+*/

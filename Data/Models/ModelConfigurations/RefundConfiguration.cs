@@ -1,3 +1,4 @@
+/*
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -21,3 +22,4 @@ public class RefundConfiguration : IEntityTypeConfiguration<Refund>
         );
     }
 }
+*/

@@ -26,8 +26,4 @@ public class Refund
     public bool IsDeleted { get; set; } = false;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-
-    public RefundMethod RefundMethod { get; set; }
-    public Payment Payment { get; set; }
-    public User ProcessedByUser { get; set; }
 }

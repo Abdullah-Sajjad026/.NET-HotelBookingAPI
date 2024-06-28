@@ -26,7 +26,7 @@ public class Reservation
     public int RoomId { get; set; }
 
     [Comment("The user who made the reservation")]
-    public int UserId { get; set; }
+    public string UserId{ get; set; }
 
     public DateTime BookingDate { get; set; }
     public DateTime CheckInDate { get; set; }

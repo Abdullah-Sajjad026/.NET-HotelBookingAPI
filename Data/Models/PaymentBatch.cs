@@ -6,7 +6,7 @@ namespace HotelBookingAPI.Data.Models;
 public class PaymentBatch
 {
     public int PaymentBatchId { get; set; }
-    public int UserId { get; set; }
+    public string UserId{ get; set; }
     public DateTime PaymentDate { get; set; }
 
     [Column(TypeName = "decimal(18, 2)")]

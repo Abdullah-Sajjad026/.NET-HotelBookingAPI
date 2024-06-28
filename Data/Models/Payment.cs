@@ -16,10 +16,10 @@ public class Payment
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    [ForeignKey(nameof(ReservationId))]
-    public Reservation Reservation { get; set; }
+    // [ForeignKey(nameof(ReservationId))]
+    // public Reservation Reservation { get; set; }
 
-    [ForeignKey(nameof(PaymentBatchId))]
-    public PaymentBatch PaymentBatch { get; set; }
+    // [ForeignKey(nameof(PaymentBatchId))]
+    // public PaymentBatch PaymentBatch { get; set; }
 
 }
