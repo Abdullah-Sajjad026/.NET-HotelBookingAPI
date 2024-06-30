@@ -63,7 +63,12 @@ public class AuthenticationService : IAuthenticationService
     }
     public string GenerateJwtToken(ClaimsPrincipal claimsPrincipal)
     {
-        var claims = claimsPrincipal.Claims.Select(c => new Claim(c.Type, c.Value)).ToList();
+        var claims = new List<Claim>
+        {
+            new(JwtRegisteredClaimNames.Sub, claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier).Value),
+            new(JwtRegisteredClaimNames.Email, claimsPrincipal.FindFirst(ClaimTypes.Email).Value),
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+        };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
