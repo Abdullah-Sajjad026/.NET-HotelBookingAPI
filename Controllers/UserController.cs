@@ -57,10 +57,10 @@ public class UserController : ControllerBase
         );
     }
 
-    [Authorize]
     [HttpGet("profile")]
+    [Authorize]
     public IActionResult GetUserProfile()
     {
-        return Ok(User.Identity.Name);
+        return Ok();
     }
 }

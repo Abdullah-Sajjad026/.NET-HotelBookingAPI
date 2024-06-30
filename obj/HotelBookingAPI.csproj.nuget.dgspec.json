@@ -47,9 +47,9 @@
               "target": "Package",
               "version": "[0.1.0, )"
             },
-            "BouncyCastle": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[1.8.9, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
